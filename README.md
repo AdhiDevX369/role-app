@@ -1,66 +1,155 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Artisan Commands
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository contains commonly used `php artisan` commands in Laravel along with their descriptions.
 
-## About Laravel
+## Commands
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### `php artisan migrate`
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Description:** Runs all the outstanding migrations.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### `php artisan db:seed`
 
-## Learning Laravel
+**Description:** Seeds the database with records as defined in the seed files.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### `php artisan make:model ModelName`
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Description:** Creates a new Eloquent model in the app/Models directory.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### `php artisan make:controller ControllerName`
 
-## Laravel Sponsors
+**Description:** Generates a new controller class in the app/Http/Controllers directory.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### `php artisan make:migration create_table_name`
 
-### Premium Partners
+**Description:** Creates a new migration file for creating a new database table.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### `php artisan cache:clear`
 
-## Contributing
+**Description:** Flushes the application cache.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### `php artisan route:list`
 
-## Code of Conduct
+**Description:** Displays the list of all registered routes.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### `php artisan queue:work`
 
-## Security Vulnerabilities
+**Description:** Starts processing jobs on the queue as a daemon.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### `php artisan key:generate`
 
-## License
+**Description:** Generates a new application key for securing sessions and other encrypted data.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### `php artisan storage:link`
+
+**Description:** Creates a symbolic link from `public/storage` to `storage/app/public`.
+
+### `php artisan config:cache`
+
+**Description:** Consolidates and caches all of the configuration files.
+
+### `php artisan make:middleware MiddlewareName`
+
+**Description:** Creates a new middleware class in the app/Http/Middleware directory.
+
+## Additional Commands
+
+### `php artisan make:factory FactoryName`
+
+**Description:** Generates a new model factory in the database/factories directory.
+
+### `php artisan make:migration add_column_to_table --table=tableName`
+
+**Description:** Creates a migration file for adding a new column to an existing table.
+
+### `php artisan make:policy PolicyName`
+
+**Description:** Generates a new policy class in the app/Policies directory.
+
+### `php artisan make:provider ProviderName`
+
+**Description:** Creates a new service provider class in the app/Providers directory.
+
+### `php artisan route:cache`
+
+**Description:** Creates a route cache file to speed up route registration.
+
+### `php artisan make:command CommandName`
+
+**Description:** Generates a new Artisan command.
+
+### `php artisan optimize`
+
+**Description:** Optimizes the framework for better performance.
+
+### `php artisan queue:restart`
+
+**Description:** Restarts queue worker daemons after their current job is finished.
+
+### `php artisan make:resource ResourceName`
+
+**Description:** Creates a new resource class.
+
+### `php artisan schedule:run`
+
+**Description:** Runs the scheduled commands defined in the `App\Console\Kernel`.
+
+### `php artisan tinker`
+
+**Description:** Opens an interactive shell to interact with your application.
+
+### `php artisan vendor:publish --tag=tagName`
+
+**Description:** Publishes assets from a package.
+
+### `php artisan make:middleware MiddlewareName`
+
+**Description:** Creates a new middleware class in the app/Http/Middleware directory.
+
+### `php artisan down`
+
+**Description:** Puts the application into maintenance mode.
+
+### `php artisan up`
+
+**Description:** Takes the application out of maintenance mode.
+
+### `php artisan make:channel ChannelName`
+
+**Description:** Creates a new channel class for broadcasting.
+
+### `php artisan make:listener ListenerName`
+
+**Description:** Generates a new event listener class.
+
+### `php artisan queue:failed`
+
+**Description:** List all of the failed queue jobs.
+
+### `php artisan event:generate`
+
+**Description:** Generates the missing events and listeners based on registrations.
+
+### `php artisan make:mail MailName`
+
+**Description:** Generates a new email class for notifications.
+
+### `php artisan storage:link`
+
+**Description:** Creates a symbolic link from `public/storage` to `storage/app/public`.
+
+### `php artisan make:auth`
+
+**Description:** Scaffold basic login and registration views and routes.
+
+### `php artisan make:test TestName`
+
+**Description:** Creates a new test class in the tests directory.
+
+### `php artisan make:console CommandName`
+
+**Description:** Generates a new Artisan command.
+
+### `php artisan optimize:clear`
+
+**Description:** Clears the cached bootstrap files.
